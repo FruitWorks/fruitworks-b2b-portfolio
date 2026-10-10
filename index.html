@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="FruitWorks is an independent hardware engineering studio delivering custom PCB design, embedded systems, IoT product development, prototyping, and academic project support.">
+  <title>FruitWorks — Hardware, from idea to prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080808;--panel:#111;--panel2:#171717;--line:#2a2a2a;--ink:#f4f2ee;--muted:#aaa7a2;--orange:#E04816;--max:1180px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--ink);font-family:'Space Grotesk',Arial,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button,a{-webkit-tap-highlight-color:transparent}.wrap{width:min(var(--max),calc(100% - 44px));margin-inline:auto}.eyebrow{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);font-weight:700}.muted{color:var(--muted)}.orange{color:var(--orange)}
+    header{position:sticky;top:0;z-index:30;background:rgba(8,8,8,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.09)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;min-width:0}.brand-logo{display:block;width:174px;height:auto;max-height:36px;object-fit:contain;object-position:left center}.footer-logo{display:block;width:128px;height:auto;max-height:25px}.footer-tagline{margin-left:14px;vertical-align:middle}.navlinks{display:flex;align-items:center;gap:28px;font-size:.9rem;color:#d5d3cf}.navlinks a:hover{color:var(--orange)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 17px;background:var(--orange);color:#fff;font-weight:700;font-size:.9rem;border:1px solid var(--orange);transition:transform .2s,background .2s}.nav-cta:hover,.btn:hover{background:#f05220;transform:translateY(-2px)}.menu-toggle{display:none;background:none;border:1px solid var(--line);color:white;padding:8px 10px;font:inherit}
+    .hero{padding:86px 0 72px;position:relative;overflow:hidden}.hero:before{content:'';position:absolute;width:540px;height:540px;right:-230px;top:-170px;border:1px solid rgba(224,72,22,.22);border-radius:50%;box-shadow:0 0 0 60px rgba(224,72,22,.025),0 0 0 120px rgba(224,72,22,.02);pointer-events:none}.hero-grid{display:grid;grid-template-columns:1.13fr .87fr;align-items:center;gap:56px;position:relative}.hero h1{font-size:clamp(3rem,7.1vw,6.6rem);line-height:.96;letter-spacing:-.085em;margin:22px 0 25px;font-weight:600;max-width:780px}.hero h1 span{color:var(--orange)}.hero p{font-size:1.12rem;line-height:1.75;color:#b9b6b0;max-width:620px;margin:0 0 30px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.btn.secondary{background:transparent;border-color:#464646;color:var(--ink)}.btn.secondary:hover{border-color:var(--orange);color:white}.micro-note{margin-top:25px;font-size:.8rem;color:#888}.hero-visual{position:relative;min-height:465px;display:grid;place-items:center}.hero-board{width:100%;max-width:520px;aspect-ratio:1/1;object-fit:contain;position:relative;z-index:1;filter:drop-shadow(0 22px 35px rgba(0,0,0,.45))}.visual-tag{position:absolute;z-index:2;left:0;bottom:23px;background:#101010;border:1px solid #353535;padding:13px 15px;max-width:225px}.visual-tag b{font-size:.82rem;display:block}.visual-tag span{display:block;color:var(--muted);font-size:.73rem;margin-top:3px}.crosshair{position:absolute;right:4%;top:5%;width:70px;height:70px;border:1px solid #343434}.crosshair:before,.crosshair:after{content:'';position:absolute;background:var(--orange)}.crosshair:before{height:1px;width:100%;top:50%}.crosshair:after{width:1px;height:100%;left:50%}
+    .ticker{border-block:1px solid #292929;background:#0d0d0d;overflow:hidden}.ticker-inner{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;padding:18px 0;color:#c4c0ba;font-size:.78rem;letter-spacing:.11em;text-transform:uppercase}.ticker span:before{content:'↗';color:var(--orange);padding-right:10px}
+    section{padding:96px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:38px}.section-head h2{font-size:clamp(2.1rem,4.4vw,4rem);letter-spacing:-.075em;line-height:1;margin:12px 0 0;font-weight:600}.section-head p{max-width:410px;color:var(--muted);margin:0}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.service{background:var(--panel);border:1px solid #272727;padding:27px 25px;min-height:255px;position:relative;transition:border .2s,transform .2s}.service:hover{border-color:var(--orange);transform:translateY(-3px)}.service .num{color:var(--orange);font-size:.76rem;letter-spacing:.12em}.service h3{font-size:1.28rem;margin:32px 0 10px;letter-spacing:-.04em}.service p{font-size:.92rem;color:var(--muted);margin:0}.service-icon{position:absolute;top:22px;right:22px;color:#5b5b5b;font-size:1.2rem}.services-foot{margin-top:18px;border-left:2px solid var(--orange);padding:10px 16px;color:var(--muted);font-size:.88rem}
+    .process{background:#101010;border-block:1px solid #242424}.process-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.process-intro h2{font-size:clamp(2.5rem,4.5vw,4.4rem);letter-spacing:-.08em;line-height:.98;margin:14px 0 18px}.process-intro p{color:var(--muted);max-width:390px}.process-list{border-top:1px solid #353535}.step{display:grid;grid-template-columns:55px 1fr;gap:20px;padding:23px 0;border-bottom:1px solid #353535}.step .step-no{color:var(--orange);font-size:.83rem;padding-top:4px}.step h3{margin:0 0 5px;font-size:1.12rem}.step p{margin:0;color:var(--muted);font-size:.9rem}
+    .work-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:15px}.work-card{grid-column:span 6;background:#111;border:1px solid #292929;overflow:hidden}.work-card.wide{grid-column:span 7}.work-card.narrow{grid-column:span 5}.work-img{height:290px;background:#f5f5f3;display:grid;place-items:center;padding:18px;overflow:hidden}.work-img img{width:100%;height:100%;object-fit:contain;transition:transform .4s}.work-card:hover .work-img img{transform:scale(1.035)}.work-info{padding:20px 22px 23px}.work-info .tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--orange)}.work-info h3{margin:8px 0 6px;font-size:1.35rem;letter-spacing:-.04em}.work-info p{margin:0;color:var(--muted);font-size:.9rem;max-width:560px}.work-disclaimer{font-size:.78rem;color:#817e78;margin-top:17px}
+    .pricing{background:#e8e5de;color:#111}.pricing .eyebrow{color:#b63812}.pricing .section-head p{color:#57534d}.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.price-card{padding:27px;background:#f3f0e9;border:1px solid #c9c5bc}.price-card.featured{background:#111;color:#fff;border-color:#111}.price-card .price-label{font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;color:#777}.price-card.featured .price-label{color:var(--orange)}.price-card h3{font-size:1.45rem;margin:17px 0 10px;letter-spacing:-.05em}.price-card p{color:#5c5851;font-size:.9rem;min-height:62px}.price-card.featured p{color:#aaa7a2}.price-card ul{padding:0;list-style:none;margin:20px 0 0;border-top:1px solid #ccc8bf}.price-card.featured ul{border-color:#393939}.price-card li{padding:10px 0;border-bottom:1px solid #ccc8bf;font-size:.87rem}.price-card.featured li{border-color:#393939}.price-card li:before{content:'↗';color:var(--orange);margin-right:9px}.price-note{font-size:.82rem;color:#5d5953;margin-top:18px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:66px;align-items:center}.about-art{border:1px solid #2d2d2d;padding:24px;background:#101010;position:relative}.about-art img{width:100%;height:330px;object-fit:contain}.about-art:after{content:'INDEPENDENT HARDWARE STUDIO';position:absolute;bottom:12px;left:24px;font-size:.64rem;letter-spacing:.16em;color:#85817a}.about-art.founder-card{padding:0;background:#f4f4f2;overflow:hidden}.about-art.founder-card:after{content:'FOUNDER & PRIMARY DEVELOPER';left:0;bottom:0;padding:12px 16px;background:rgba(8,8,8,.91);color:#d4d0c9;font-size:.66rem}.about-art .founder-photo{height:430px;object-fit:cover;object-position:center 25%}.about-copy h2{font-size:clamp(2.4rem,4.4vw,4rem);line-height:1;letter-spacing:-.08em;margin:13px 0 20px}.about-copy p{color:var(--muted)}.founder{display:flex;gap:14px;align-items:center;margin-top:27px;padding-top:22px;border-top:1px solid #303030}.avatar{width:44px;height:44px;background:var(--orange);display:grid;place-items:center;font-weight:700}.founder b{display:block}.founder span{font-size:.8rem;color:var(--muted)}.founder-link{display:inline-block;margin-top:8px;color:var(--orange);font-size:.82rem;font-weight:700}.founder-link:hover{text-decoration:underline;text-underline-offset:3px}
+    .contact{padding:0 0 80px}.contact-panel{background:var(--orange);padding:55px;display:grid;grid-template-columns:1fr .85fr;gap:48px;color:#fff;position:relative;overflow:hidden}.contact-panel:after{content:'FW';position:absolute;right:-20px;bottom:-110px;color:rgba(0,0,0,.09);font-size:22rem;line-height:1;font-weight:700;letter-spacing:-.12em;pointer-events:none}.contact h2{font-size:clamp(2.6rem,5vw,5rem);letter-spacing:-.085em;line-height:.96;margin:14px 0 18px;max-width:650px}.contact p{color:rgba(255,255,255,.82);max-width:470px}.contact .eyebrow{color:#1c100c}.contact-links{position:relative;z-index:1;align-self:center}.contact-link{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.38);font-weight:600}.contact-link span{font-size:.76rem;font-weight:400;opacity:.82;display:block}.contact-link strong{display:block;overflow-wrap:anywhere}.contact-link b{font-size:1.3rem}.contact-link:hover{padding-left:6px}
+    footer{border-top:1px solid #272727;padding:24px 0 32px}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:25px;font-size:.79rem;color:#8e8a83}.footer-inner>div:first-child{display:flex;align-items:center;gap:0}.footer-links{display:flex;gap:20px}.footer-links a:hover{color:var(--orange)}.footer-brand{color:#e6e2dc;font-weight:700;letter-spacing:-.04em}
+    @media(max-width:900px){.hero-grid{grid-template-columns:1fr 0.8fr;gap:22px}.hero-visual{min-height:350px}.service-grid{grid-template-columns:repeat(2,1fr)}.process-grid{gap:36px}.about-grid{gap:35px}.contact-panel{padding:38px;gap:25px}}
+    @media(max-width:680px){.wrap{width:min(var(--max),calc(100% - 32px))}.nav{height:66px}.menu-toggle{display:block}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;background:#0b0b0b;border-bottom:1px solid #303030;padding:18px 22px 22px;flex-direction:column;align-items:stretch;gap:18px}.navlinks.open{display:flex}.nav-cta{width:100%}.hero{padding:55px 0 45px}.hero-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(3.25rem,15vw,5.5rem)}.hero p{font-size:1rem}.hero-visual{min-height:300px;max-width:460px;margin:0 auto;width:100%}.hero-board{max-width:350px}.visual-tag{left:0;bottom:10px}.crosshair{right:1%;top:1%;width:48px;height:48px}.ticker-inner{justify-content:flex-start;gap:17px}.ticker-inner span{font-size:.68rem}section{padding:68px 0}.section-head{display:block;margin-bottom:27px}.section-head p{margin-top:18px}.service-grid{grid-template-columns:1fr}.service{min-height:205px}.service h3{margin-top:27px}.process-grid{grid-template-columns:1fr;gap:30px}.step{grid-template-columns:38px 1fr}.work-card,.work-card.wide,.work-card.narrow{grid-column:span 12}.work-img{height:250px}.pricing-grid{grid-template-columns:1fr}.price-card p{min-height:0}.about-grid{grid-template-columns:1fr;gap:32px}.about-art img{height:270px}.about-art .founder-photo{height:370px;object-position:center 23%}.brand-logo{width:150px;max-height:31px}.footer-logo{width:120px}.contact{padding-bottom:48px}.contact-panel{grid-template-columns:1fr;padding:29px 23px;gap:20px}.contact h2{font-size:3.4rem}.contact-panel:after{font-size:14rem;bottom:-58px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="FruitWorks home"><img class="brand-logo" src="assets/fruitworks-wordmark.svg" alt="FruitWorks"></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">Menu +</button>
+      <nav class="navlinks" id="navLinks" aria-label="Main navigation">
+        <a href="#services">Services</a><a href="#work">Selected work</a><a href="#process">Process</a><a href="#about">About</a><a class="nav-cta" href="#contact">Start a project <span>↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Independent hardware engineering studio · India</div>
+          <h1>Ideas into<br><span>real hardware.</span></h1>
+          <p>FruitWorks helps startups, teams and institutions turn electronics ideas into working prototypes — from custom PCBs and embedded firmware to connected IoT products.</p>
+          <div class="hero-actions"><a class="btn" href="#contact">Tell us what you're building <span>↗</span></a><a class="btn secondary" href="#work">Explore our work <span>↓</span></a></div>
+          <div class="micro-note">PCB design · Embedded systems · Prototyping · Product development</div>
+        </div>
+        <div class="hero-visual">
+          <div class="crosshair" aria-hidden="true"></div>
+          <img class="hero-board" src="assets/pebblec3-front.png" alt="FruitWorks Pebble C3 custom microcontroller development board render">
+          <div class="visual-tag"><b>Built by makers, for makers.</b><span>Hardware designed around your idea.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker"><div class="wrap ticker-inner"><span>Custom PCB design</span><span>Embedded firmware</span><span>IoT product development</span><span>Affordable project support</span></div></div>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">What we do</div><h2>From circuit to<br>working prototype.</h2></div><p>Practical engineering support for early-stage ideas, product teams and academic projects. Scope can start small and grow with your requirements.</p></div>
+        <div class="service-grid">
+          <article class="service"><span class="num">01 / PCB</span><span class="service-icon">↗</span><h3>Custom PCB design</h3><p>2-layer and 4-layer PCB layouts, schematics, component selection, footprints, routing, design reviews and fabrication-ready files.</p></article>
+          <article class="service"><span class="num">02 / EMBEDDED</span><span class="service-icon">⌘</span><h3>Embedded systems & firmware</h3><p>Microcontroller firmware, sensor integration, communication protocols, driver development, debugging and board bring-up.</p></article>
+          <article class="service"><span class="num">03 / IoT</span><span class="service-icon">⌁</span><h3>IoT product development</h3><p>Connected devices using Wi-Fi, BLE and suitable wired interfaces, with cloud or dashboard integration where required.</p></article>
+          <article class="service"><span class="num">04 / PROTOTYPE</span><span class="service-icon">＋</span><h3>Electronics prototyping</h3><p>Proof-of-concept builds, module integration, quick test fixtures, engineering validation and iterative improvements.</p></article>
+          <article class="service"><span class="num">05 / INSTITUTIONS</span><span class="service-icon">▦</span><h3>College & institutional projects</h3><p>Affordable, guided electronics project development for students, labs and faculty — including documentation and demonstrations.</p></article>
+          <article class="service"><span class="num">06 / PRODUCT</span><span class="service-icon">◈</span><h3>Product engineering support</h3><p>Technical feasibility, BOM planning, component sourcing guidance, enclosure-aware board design and prototype iteration.</p></article>
+          <article class="service"><span class="num">07 / SENSORS</span><span class="service-icon">⌁</span><h3>Sensor & data acquisition systems</h3><p>Analog front ends, sensor conditioning, data logging and acquisition prototypes for research and engineering applications.</p></article>
+          <article class="service"><span class="num">08 / DESIGN REVIEW</span><span class="service-icon">◎</span><h3>PCB review & troubleshooting</h3><p>Review existing designs, help diagnose hardware issues, and identify practical fixes before the next prototype run.</p></article>
+          <article class="service"><span class="num">09 / LEARNING</span><span class="service-icon">↗</span><h3>Technical documentation</h3><p>Readable schematics, connection guides, firmware notes, test procedures and project reports matched to the work.</p></article>
+        </div>
+        <div class="services-foot">Have a project that doesn't fit a category? Share the problem and constraints — we'll help define a sensible scope.</div>
+      </div>
+    </section>
+
+    <section class="process" id="process">
+      <div class="wrap process-grid">
+        <div class="process-intro"><div class="eyebrow">How we work</div><h2>Small steps.<br>Tested hardware.</h2><p>No bloated process. We agree on the goal, make the scope clear, and build in iterations so problems surface early.</p><a href="#contact" class="btn">Discuss your project <span>↗</span></a></div>
+        <div class="process-list">
+          <div class="step"><div class="step-no">01</div><div><h3>Understand the brief</h3><p>We discuss the use case, required features, budget, deadline and what a successful prototype should prove.</p></div></div>
+          <div class="step"><div class="step-no">02</div><div><h3>Define scope & estimate</h3><p>You receive a practical plan covering deliverables, assumptions, milestones and estimated costs before work begins.</p></div></div>
+          <div class="step"><div class="step-no">03</div><div><h3>Design & develop</h3><p>We work through schematics, PCB layout, firmware and integration in reviewable stages.</p></div></div>
+          <div class="step"><div class="step-no">04</div><div><h3>Test, document, iterate</h3><p>We verify the agreed functionality, share findings and deliver the files and documentation defined in the project scope.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Selected work</div><h2>Designed. Routed.<br>Made tangible.</h2></div><p>A few hardware designs and prototypes from the FruitWorks workbench. These examples show the type of work we can build on.</p></div>
+        <div class="work-grid">
+          <article class="work-card wide"><div class="work-img"><img src="assets/pebblec3-front.png" alt="Pebble C3 microcontroller board front render" loading="lazy"></div><div class="work-info"><div class="tag">Development board · PCB design</div><h3>Pebble C3</h3><p>A compact ESP32-C3 development board concept with accessible pins, USB-C and a maker-oriented form factor.</p></div></article>
+          <article class="work-card narrow"><div class="work-img"><img src="assets/pebblec3-back.png" alt="Pebble C3 microcontroller board back render" loading="lazy"></div><div class="work-info"><div class="tag">Board layout · Hardware</div><h3>Board from both sides</h3><p>Component placement, signal routing and silkscreen details shaped for usability and assembly.</p></div></article>
+          <article class="work-card narrow"><div class="work-img"><img src="assets/floppyfront.png" alt="Floppy 256 memory board front render" loading="lazy"></div><div class="work-info"><div class="tag">Tiny hardware · I²C memory</div><h3>Floppy 256</h3><p>A tiny EEPROM breakout concept with a playful floppy-disk-inspired PCB form.</p></div></article>
+          <article class="work-card wide"><div class="work-img"><img src="assets/floppyrear.png" alt="Floppy 256 memory board rear render" loading="lazy"></div><div class="work-info"><div class="tag">PCB design · Detail</div><h3>Small board, considered details</h3><p>Compact routing and clearly marked interface pins in a small, distinctive module.</p></div></article>
+          <article class="work-card wide"><div class="work-img"><img src="assets/p10-driver.jpg" alt="P10 display driver ESP32 electronics board render" loading="lazy"></div><div class="work-info"><div class="tag">Embedded hardware · Interface board</div><h3>P10 driver / ESP32 interface</h3><p>A controller-board layout exploring embedded connectivity, display interfacing and accessible expansion headers.</p></div></article>
+          <article class="work-card narrow"><div class="work-img"><img src="assets/tinker5graphic.png" alt="USB-C microcontroller development board render" loading="lazy"></div><div class="work-info"><div class="tag">Microcontroller board · Prototyping</div><h3>Compact controller concept</h3><p>A small USB-C development board layout for experimenting with microcontrollers and maker workflows.</p></div></article>
+        </div>
+        <div class="work-disclaimer">Project images are design renders and examples of engineering work; final deliverables and validation vary by project scope.</div>
+      </div>
+    </section>
+
+    <section class="pricing" id="approach">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Flexible engagement</div><h2>Engineering for<br>real-world budgets.</h2></div><p>We aim to keep early-stage development accessible. Pricing depends on complexity, components, timeline and the level of validation needed.</p></div>
+        <div class="pricing-grid">
+          <article class="price-card"><div class="price-label">01 / Get unstuck</div><h3>Review & troubleshooting</h3><p>For an existing PCB, circuit or prototype that needs expert attention.</p><ul><li>Design or schematic review</li><li>Debugging consultation</li><li>Actionable next steps</li></ul></article>
+          <article class="price-card featured"><div class="price-label">02 / Build the first version</div><h3>Prototype development</h3><p>For a startup or team moving from an idea to a working proof of concept.</p><ul><li>Scoped hardware development</li><li>PCB and embedded firmware</li><li>Bring-up and agreed testing</li></ul></article>
+          <article class="price-card"><div class="price-label">03 / Learn by building</div><h3>Student & institutional</h3><p>For college projects, lab demonstrators and research prototypes.</p><ul><li>Budget-aware project scope</li><li>Build and explain the system</li><li>Documentation and demo support</li></ul></article>
+        </div>
+        <div class="price-note">No fixed prices are listed because each project differs. Contact us with your budget and deadline for a clear, project-specific estimate.</div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div class="about-art founder-card"><img class="founder-photo" src="assets/founder-aamir.jpg" alt="Aamir, founder and primary developer of FruitWorks" loading="lazy"></div>
+        <div class="about-copy"><div class="eyebrow">Small studio. Hands-on engineering.</div><h2>Built close to the hardware.</h2><p>FruitWorks is an independent electronics studio focused on practical, developer-friendly hardware. We work hands-on across board design, firmware and prototyping, with clear communication from first brief to testable build.</p><p>Projects are led by Aamir, founder and primary developer, with scope tailored to the needs of startups, makers and institutions.</p><div class="founder"><div class="avatar">A</div><div><b>Aamir · Founder & primary developer</b><span>Electronics design · Embedded development · Prototyping</span><a class="founder-link" href="https://www.linkedin.com/in/aamir-ayaaz-b5549a220" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></div></div></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-panel">
+        <div><div class="eyebrow">Have a project in mind?</div><h2>Let's make it<br>work in hardware.</h2><p>Send the idea, expected features, timeline and approximate budget. We'll take it from there and work out the next practical step.</p></div>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:hello.fruitworks@gmail.com?subject=FruitWorks%20project%20enquiry"><div><span>Email us</span><strong>hello.fruitworks@gmail.com</strong></div><b>↗</b></a>
+          <a class="contact-link" href="https://wa.me/919361776195" target="_blank" rel="noopener noreferrer"><div><span>Call / WhatsApp</span><strong>+91 93617 76195</strong></div><b>↗</b></a>
+          <a class="contact-link" href="https://github.com/Computationgeek" target="_blank" rel="noopener noreferrer"><div><span>Founder on GitHub</span><strong>github.com/Computationgeek</strong></div><b>↗</b></a>
+          <a class="contact-link" href="https://www.linkedin.com/in/aamir-ayaaz-b5549a220" target="_blank" rel="noopener noreferrer"><div><span>Founder on LinkedIn</span><strong>linkedin.com/in/aamir-ayaaz-b5549a220</strong></div><b>↗</b></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><div><img class="footer-logo" src="assets/fruitworks-wordmark.svg" alt="FruitWorks"> <span class="footer-tagline">Hardware, from idea to prototype.</span></div><div>© <span id="year"></span> FruitWorks · India</div><div class="footer-links"><a href="mailto:hello.fruitworks@gmail.com">Email</a><a href="https://github.com/Computationgeek" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/aamir-ayaaz-b5549a220" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="#top">Back to top ↑</a></div></div></footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.textContent = open ? 'Close −' : 'Menu +';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = 'Menu +';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
